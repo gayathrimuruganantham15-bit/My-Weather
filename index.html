@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Weather</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>
+            <i class="fa-solid fa-cloud-sun"></i>
+            Weather Dashboard
+        </h1>
+
+        <div class="top-buttons">
+
+            <button id="themeToggle" title="Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="unitToggle" title="Change Unit">
+                °C / °F
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-container">
+
+        <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter City Name">
+
+        <button id="searchBtn">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+        <button id="locationBtn">
+
+            <i class="fa-solid fa-location-crosshairs"></i>
+
+        </button>
+
+    </div>
+
+    <!-- ================= LOADER ================= -->
+
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- ================= ERROR ================= -->
+
+    <p id="errorMessage"></p>
+
+    <!-- ================= WEATHER CARD ================= -->
+
+    <section id="weatherCard" class="weather-card hidden">
+
+        <div class="weather-main">
+
+            <h2 id="cityName">City</h2>
+
+            <img
+            id="weatherIcon"
+            src=""
+            alt="Weather Icon">
+
+            <h1 id="temperature">0°C</h1>
+
+            <p id="description">
+
+                Weather Description
+
+            </p>
+
+        </div>
+
+        <!-- WEATHER DETAILS -->
+
+        <div class="weather-details">
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <span id="feelsLike"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <span id="humidity"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-wind"></i>
+
+                <span id="wind"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <span id="pressure"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-eye"></i>
+
+                <span id="visibility"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span id="country"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-sun"></i>
+
+                <span id="sunrise"></span>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-moon"></i>
+
+                <span id="sunset"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FORECAST ================= -->
+
+    <section>
+
+        <h2 class="forecast-title">
+
+            5-Day Forecast
+
+        </h2>
+
+        <div id="forecastContainer">
+
+        </div>
+
+    </section>
+
+    <!-- ================= RECENT SEARCH ================= -->
+
+    <section>
+
+        <h2 class="recent-title">
+
+            Recent Searches
+
+        </h2>
+
+        <div id="recentSearches">
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="config.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
